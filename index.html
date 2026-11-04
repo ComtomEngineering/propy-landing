@@ -1,0 +1,665 @@
+<!DOCTYPE html><html lang="es"><head>
+<title>Propy - Plataforma de Inteligencia Inmobiliaria</title><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#2d6a48","background":"#f8f9ff","on-primary":"#ffffff","error-container":"#ffdad6","on-secondary":"#ffffff","outline-variant":"#c0c9c0","on-secondary-fixed-variant":"#005137","error":"#ba1a1a","surface-bright":"#f8f9ff","surface-variant":"#d3e4fe","secondary-fixed":"#85f8c4","on-surface":"#0b1c30","tertiary-fixed":"#e2dfff","on-background":"#0b1c30","surface-container-lowest":"#ffffff","outline":"#707971","surface-container-high":"#dce9ff","inverse-surface":"#213145","on-secondary-fixed":"#002114","on-tertiary":"#ffffff","on-error-container":"#93000a","tertiary":"#1d00a5","on-tertiary-fixed":"#0f0069","surface-container-low":"#eff4ff","on-primary-fixed-variant":"#0f5132","surface-container":"#e5eeff","on-secondary-container":"#00714e","tertiary-container":"#3322cc","on-tertiary-fixed-variant":"#3323cc","secondary-fixed-dim":"#68dba9","on-primary-container":"#84c39b","on-primary-fixed":"#002111","primary":"#003820","on-surface-variant":"#404942","surface-container-highest":"#d3e4fe","secondary-container":"#82f5c1","primary-fixed":"#b0f1c7","primary-container":"#0f5132","surface":"#f8f9ff","secondary":"#006c4a","on-tertiary-container":"#afadff","primary-fixed-dim":"#95d4ac","inverse-primary":"#95d4ac","surface-dim":"#cbdbf5","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#c3c0ff"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-2xl":"2rem","space-md":"0.75rem",margin:"1rem","space-xl":"1.5rem","space-lg":"1rem","space-2xs":"0.125rem","space-3xl":"3rem","margin-desktop":"2rem","space-sm":"0.5rem","gutter-desktop":"1.25rem","margin-tablet":"1.5rem",gutter:"1rem","space-xs":"0.25rem"},fontFamily:{"headline-md":["Hanken Grotesk"],"label-lg":["Hanken Grotesk"],"numeric-data-md":["JetBrains Mono"],"label-md":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"numeric-data-sm":["JetBrains Mono"],"body-sm":["Hanken Grotesk"],"headline-xl":["Hanken Grotesk"],"numeric-data-lg":["JetBrains Mono"],"body-md":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"headline-xl-mobile":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"]},fontSize:{"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"500"}],"numeric-data-md":["13px",{lineHeight:"18px",letterSpacing:"-0.01em",fontWeight:"500"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"600"}],"numeric-data-sm":["11px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"700"}],"numeric-data-lg":["22px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"400"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.005em",fontWeight:"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WE03FEX4GTqRupxsZOlDovKkC3jIsg_ykTsr-scTccWIecNksGEOgiCGiwap8v-afYzAPdvUhALArFXojD-A5xV_LfhrdbSlCODv_Foj-q9208MvL3neuvFXIuVEK_ZfGKxPQNFLk2aXGL3PXYjeliTzAjrw0B18ymZW2jQHk0haQt6jCfRptDMUoLkr-8298NQlDQzg8GG4OFVNUIq7dPhRCxGEUTUCN-WzTv-PEUtx_qISOUBQJjQ6w"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none">Propy</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none tracking-wider uppercase">Asset Intelligence</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-primary font-label-lg font-semibold rounded-lg"><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="caracteristicas" href="/#">Características</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="captacion-particulares" href="/#">Captación de Particulares</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="explorador-ia" href="/#">Explorador IA</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="negociacion-valoracion" href="/#">Negociación &amp; Valoración</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="casos-exito" href="/#">Casos de Éxito</a><a class="px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="precios" href="/#">Precios</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="login" href="/#">Iniciar Sesión</a><a class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg font-label-lg text-label-lg font-semibold bg-primary-container text-on-primary hover:bg-primary transition-colors shadow-[0_1px_3px_0_rgba(15,23,42,0.06)]" data-path="demo" href="/#">Solicitar Demo / Probar Gratis</a></div></div></header><main class="w-full pt-16 bg-background"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest">
+<!-- Subtle architectural isometric grid layer -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#003820 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl md:py-space-3xl relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<!-- Left: Value Narrative & Conversion Hooks -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Institutional pill badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-container/30 w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-secondary-container font-semibold">
+              LA PLATAFORMA DE INTELIGENCIA INMOBILIARIA N.º 1 EN ESPAÑA
+            </span>
+</div>
+<!-- Main Impact Title -->
+<h1 class="font-headline-xl text-headline-xl lg:text-[44px] lg:leading-[52px] text-primary tracking-tight font-bold">
+            Multiplica tus Captaciones y Cierra Operaciones al Mejor Precio con <span class="text-secondary underline decoration-secondary-fixed decoration-4 underline-offset-4">Inteligencia Artificial</span>
+</h1>
+<!-- Body copy -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            La solución definitiva para agencias y agentes inmobiliarios en España: detecta particulares vendiendo sin comisión, localiza oportunidades con descuento real antes que nadie y asesora con datos catastrales y de mercado en tiempo real.
+          </p>
+<!-- Dual CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-primary-container text-on-primary hover:bg-primary transition-all shadow-md group" href="/#precios">
+<span>Empezar Prueba Gratuita de 14 Días</span>
+<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<button class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-surface-container-low text-primary hover:bg-surface-container transition-colors" onclick="document.getElementById('demo-modal').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>Ver Demo Interactiva en Vídeo</span>
+</button>
+</div>
+<!-- Trust & Social Proof Metrics -->
+<div class="pt-space-md flex flex-wrap items-center gap-space-xl text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-numeric-data-sm text-numeric-data-sm shadow-sm">MA</div>
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-numeric-data-sm text-numeric-data-sm shadow-sm">CV</div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-numeric-data-sm text-numeric-data-sm shadow-sm">ES</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-numeric-data-sm text-numeric-data-sm text-on-surface font-semibold ml-1">4.9 / 5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+1.850 agentes colegiados y brokers en activo</span>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/40 hidden sm:block"></div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">Integración COAPI &amp; DGC</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary text-base">security</span>
+<span class="font-label-sm text-label-sm font-semibold">RGPD Garantizado</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Modern Glassmorphic Dashboard Showcase with Provided Creative -->
+<div class="lg:col-span-5 relative">
+<!-- Ambient decorative halo -->
+<div class="absolute -top-12 -right-12 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative bg-surface-container-low rounded-xl shadow-xl overflow-hidden p-space-xs transition-transform duration-500 hover:scale-[1.01]">
+<img alt="Propy Platform Screenshot" class="w-full h-auto object-cover rounded-lg shadow-sm" src="/assets/images/platform-screenshot.png" loading="lazy" decoding="async">
+<!-- Live Data Floating Chips -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-md flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Sincronización en Directo: Valencia &amp; Madrid</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-primary px-space-md py-space-xs rounded-lg shadow-lg flex items-center gap-space-xs text-on-primary">
+<span class="material-symbols-outlined text-secondary-fixed text-sm">trending_down</span>
+<span class="font-numeric-data-sm text-numeric-data-sm font-bold">Oportunidad -40.000 € (-10.4%)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- METRICS & REGULATORY TRUST MARQUEE -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Key KPI Matrix -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md md:gap-space-lg mb-space-2xl">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-2xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Captación en Exclusiva</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-primary font-bold">+40%</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">↑ promedio</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Frente a portales convencionales</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-2xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Velocidad de Cierre</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-primary font-bold">3.5x</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">más ágil</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Con análisis registral instantáneo</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-2xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Activos Analizados</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-primary font-bold">15.000+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/día</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Catastro Nacional + Portales FSBO</span>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-2xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Ahorro Negociado</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-numeric-data-lg text-secondary font-bold">€12M+</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">acumulado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gracias al histórico de bajadas de precio</span>
+</div>
+</div>
+<!-- Institutional Logos / Tech Partners -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg bg-surface-container-lowest/60 p-space-lg rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold text-center md:text-left">
+          Ecosistema Compatible con Fuentes Oficiales de España:
+        </span>
+<div class="flex flex-wrap items-center justify-center gap-space-xl opacity-80">
+<div class="flex items-center gap-space-xs font-label-lg text-label-lg font-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary">database</span> DGC CATASTRO
+          </div>
+<div class="flex items-center gap-space-xs font-label-lg text-label-lg font-bold text-on-surface">
+<span class="material-symbols-outlined text-primary">gavel</span> REGISTRO MERCANTIL
+          </div>
+<div class="flex items-center gap-space-xs font-label-lg text-label-lg font-bold text-on-surface">
+<span class="material-symbols-outlined text-tertiary">hub</span> API FEDERACIÓN
+          </div>
+<div class="flex items-center gap-space-xs font-label-lg text-label-lg font-bold text-on-surface">
+<span class="material-symbols-outlined text-secondary">domain</span> ASOCIACIÓN COAPI
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3 VALUE PILLARS (DEEP DIVE WITH REAL ESTATE INTELLIGENCE FOCUS) -->
+<section class="w-full bg-surface py-space-3xl" id="pilares">
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-3xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Ventaja Competitiva para Agentes</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+            Tres Motores de Inteligencia para Dominar tu Zona
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Elimina el rastreo manual de anuncios repetidos. Ponemos la minería de datos y la visión por computador al servicio de tus cierres.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-md py-space-xs rounded-lg bg-surface-container font-label-sm text-label-sm text-primary font-semibold">
+            Actualización cada 180 segundos
+          </span>
+</div>
+</div>
+<!-- Bento-style 3 Pillars Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl">
+<!-- PILAR 1: CAPTACIÓN DE PARTICULARES (LEADS CALIENTES) -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">person_search</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Pilar 01 • Captación FSBO</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Particulares Reales, Cero Pérdida de Tiempo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Filtros heurísticos anti-agencias. Detectamos cuando un propietario publica de forma independiente y cotejamos su teléfono con registros públicos.
+              </p>
+</div>
+<!-- Interactive Micro-UI Demo -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm mt-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Último Lead Directo (Camp de Túria)</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-fixed text-on-secondary-fixed font-numeric-data-sm text-numeric-data-sm font-bold">NUEVO (hace 4 min)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-xs flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center text-on-surface font-body-sm text-body-sm">
+<span class="font-semibold truncate">Chalet Independiente • La Eliana</span>
+<span class="font-numeric-data-sm text-numeric-data-sm font-bold text-primary">345.000 €</span>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">phone_enabled</span> Teléfono Propietario Verificado (+34 620...)
+                </div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Alerta automática vía WhatsApp</span>
+<span class="material-symbols-outlined text-secondary text-sm">notifications_active</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs text-primary font-label-lg text-label-lg font-semibold cursor-pointer hover:text-secondary">
+<span>Explorar módulo de captación</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- PILAR 2: BÚSQUEDA INTELIGENTE & VISIÓN ARTIFICIAL -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">travel_explore</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Pilar 02 • Búsqueda Contextual</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Visión Artificial y Auditoría Catastral</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Nuestros modelos visuales escanean fotografías para identificar piscinas, terrazas, paelleros o calidades de reforma que el anuncio no describe explícitamente.
+              </p>
+</div>
+<!-- Interactive Attribute Inspector -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm mt-space-sm">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Atributos Extraídos por Visión IA:</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">pool</span> Piscina Hormigón (98%)
+                </span>
+<span class="px-space-xs py-space-2xs bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">outdoor_grill</span> Paellero / BBQ
+                </span>
+<span class="px-space-xs py-space-2xs bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">solar_power</span> Placas Solares
+                </span>
+<span class="px-space-xs py-space-2xs bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">roofing</span> Cubierta Teja Árabe
+                </span>
+</div>
+<div class="p-space-xs bg-amber-50 rounded text-amber-800 font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-xs">info</span> Catastro: 165m² registrales vs 180m² reales
+              </div>
+</div>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs text-primary font-label-lg text-label-lg font-semibold cursor-pointer hover:text-secondary">
+<span>Ver buscador multicriterio</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- PILAR 3: ASESORAMIENTO EN NEGOCIACIÓN Y VALORACIÓN -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">price_change</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Pilar 03 • Negociación AVM</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Argumentos de Negociación Irrefutables</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Historial cronológico completo de cambios de precio, días reales en venta acumulados y recomendación algorítmica de oferta a la baja para tu inversor.
+              </p>
+</div>
+<!-- Price Drop Visual Timeline -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm mt-space-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-sm text-label-sm font-semibold">Trazabilidad de Precios</span>
+<span class="font-numeric-data-sm text-numeric-data-sm text-error font-bold">114 días en mercado</span>
+</div>
+<!-- Mini Sparkline Graph -->
+<div class="h-10 w-full flex items-end gap-1.5 pt-2">
+<div class="flex-1 bg-outline-variant/30 h-8 rounded-xs relative group" title="Publicado: 385.000 €"></div>
+<div class="flex-1 bg-outline-variant/30 h-7 rounded-xs relative group" title="Bajada: 370.000 €"></div>
+<div class="flex-1 bg-outline-variant/50 h-5 rounded-xs relative group" title="Bajada: 355.000 €"></div>
+<div class="flex-1 bg-secondary h-3.5 rounded-xs relative group" title="Actual: 345.000 €"></div>
+</div>
+<div class="flex justify-between items-center pt-space-2xs text-secondary font-numeric-data-sm text-numeric-data-sm font-bold">
+<span>Margen Óptimo de Contraoferta:</span>
+<span>315.000 € (-8.7%)</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex items-center gap-space-xs text-primary font-label-lg text-label-lg font-semibold cursor-pointer hover:text-secondary">
+<span>Ver generador de informes PDF</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE FEATURE WALKTHROUGH & COMPARISON TABLE -->
+<section class="w-full bg-surface-container-low py-space-3xl">
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Eficiencia Comprobada</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+          ¿Cómo cambia el día a día de tu agencia con Propy?
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Compara el flujo de trabajo anticuado de prospección frente a la automatización con nuestra suite analítica.
+        </p>
+</div>
+<!-- Side-by-Side Comparison -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
+<!-- Anticuado -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm text-error">
+<span class="material-symbols-outlined text-2xl">cancel</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">El Método Tradicional y Lento</h3>
+</div>
+<ul class="flex flex-col gap-space-md text-on-surface-variant font-body-md text-body-md">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span>Revisar manualmente decenas de portales cada mañana compitiendo con cientos de agentes.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span>Llamar a falsos anuncios de particulares que terminan siendo agencias inmobiliarias.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span>Desconocimiento del tiempo real que lleva publicado el inmueble tras sucesivas republicaciones.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span>Hacer valoraciones a ciegas en Excel sin cruzar datos con la Sede Electrónica del Catastro.</span>
+</li>
+</ul>
+</div>
+<!-- Propy Way -->
+<div class="bg-primary text-on-primary p-space-xl rounded-xl shadow-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 right-0 p-space-md opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">bolt</span>
+</div>
+<div class="flex items-center gap-space-sm text-secondary-fixed">
+<span class="material-symbols-outlined text-2xl">check_circle</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold">Con Propy Asset Intelligence</h3>
+</div>
+<ul class="flex flex-col gap-space-md text-surface-container-highest font-body-md text-body-md relative z-10">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">done</span>
+<span><strong class="text-on-primary">Alertas instantáneas en WhatsApp</strong> al segundo de que un particular publica un chalet o piso en tu comarca.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">done</span>
+<span><strong class="text-on-primary">Filtro de exclusivas verificado:</strong> algoritmo que descarta agencias camufladas con un 99.4% de fiabilidad.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">done</span>
+<span><strong class="text-on-primary">Historial inalterable de rebajas</strong> y días acumulados para argumentar ofertas de compra contundentes.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">done</span>
+<span><strong class="text-on-primary">Informes ACM en PDF de marca blanca</strong> en menos de 20 segundos con el logotipo de tu agencia.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl" id="testimonios">
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Casos de Éxito en España</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+            Lo Que Dicen Agencias Líderes de Cada Región
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Desde agentes independientes hasta redes inmobiliarias con múltiples sedes en Madrid, Valencia y la Costa Blanca.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-xl">
+<!-- Testimonio 1 -->
+<div class="bg-surface p-space-xl rounded-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "En Camp de Túria la competencia por chalets es feroz. Con las alertas en tiempo real de Propy captamos 4 exclusivas en nuestra primera semana antes de que otras agencias se enteraran de que los dueños vendían."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary font-bold flex items-center justify-center font-numeric-data-sm text-numeric-data-sm">
+              VR
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Vicente Ribera</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Director en Ribera Homes (Bétera, Valencia)</span>
+</div>
+</div>
+</div>
+<!-- Testimonio 2 -->
+<div class="bg-surface p-space-xl rounded-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "El análisis de bajadas de precio acumuladas nos dio la clave para negociar un ático en Chamberí. Le ahorramos 42.000 € a nuestro comprador inversor y cerramos la operación en 10 días."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-bold flex items-center justify-center font-numeric-data-sm text-numeric-data-sm">
+              CL
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Carmen Lozano</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Personal Shopper Inmobiliario (Madrid)</span>
+</div>
+</div>
+</div>
+<!-- Testimonio 3 -->
+<div class="bg-surface p-space-xl rounded-xl shadow-sm flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              "La visión artificial es impresionante. Buscar propiedades con características no listadas como chimenea o terraza de más de 30m2 nos ahorra 2 horas diarias de cribado de fotos."
+            </p>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary font-bold flex items-center justify-center font-numeric-data-sm text-numeric-data-sm">
+              MG
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Marc Gómez</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Socio Fundador BCN Properties (Barcelona)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRICING SECTION -->
+<section class="w-full bg-surface-container-low py-space-3xl" id="precios">
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-2xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Inversión Rentabilizada con 1 Sola Captación</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+          Planes Transparentes y Flexibles
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Sin permanencia. Elige el plan que se adapte al volumen de tu equipo.
+        </p>
+<!-- Billing Period Toggle -->
+<div class="inline-flex items-center self-center bg-surface-container p-1 rounded-lg gap-1 mt-space-sm">
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all" id="btn-mensual" onclick="setBilling('mensual')">
+            Pago Mensual
+          </button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="btn-anual" onclick="setBilling('anual')">
+            Pago Anual <span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-numeric-data-sm text-[10px]">2 MESES GRATIS</span>
+</button>
+</div>
+</div>
+<!-- Pricing Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-xl items-stretch">
+<!-- Plan 1: Agente Pro -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Plan Agente Pro</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para agentes independientes y personal shoppers inmobiliarios.</p>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-[32px] text-primary font-bold" id="price-pro">79 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ mes</span>
+</div>
+<ul class="flex flex-col gap-space-sm text-on-surface font-body-sm text-body-sm pt-space-xs">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> 1 Zona o Comarca a elección
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Alertas instantáneas de Particulares (FSBO)
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> 50 contactos verificados / mes
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Histórico de rebajas de precios (hasta 90 días)
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Informes Catastrales en PDF estándar
+              </li>
+</ul>
+</div>
+<a class="mt-space-xl inline-flex items-center justify-center w-full py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-surface-container text-primary hover:bg-surface-container-high transition-colors" href="/#">
+            Probar 14 Días Gratis
+          </a>
+</div>
+<!-- Plan 2: Agencia Élite (Featured) -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-xl flex flex-col justify-between relative transform lg:-translate-y-2 bg-gradient-to-b from-surface-container-lowest to-surface-container-low">
+<!-- Featured Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-space-md py-space-2xs bg-secondary text-on-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider rounded-full shadow-sm">
+            Más Elegido por Agencias
+          </div>
+<div class="flex flex-col gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Plan Agencia Élite</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para equipos de captación y agencias en expansión.</p>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-[32px] text-primary font-bold" id="price-elite">189 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ mes</span>
+</div>
+<ul class="flex flex-col gap-space-sm text-on-surface font-body-sm text-body-sm pt-space-xs">
+<li class="flex items-center gap-space-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Hasta 5 licencias para agentes
+              </li>
+<li class="flex items-center gap-space-xs font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Todas las comarcas de tu provincia
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> <strong>Contactos de Particulares Ilimitados</strong>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Alertas directas a WhatsApp corporativo
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Informes ACM en PDF de <strong>Marca Blanca (con tu Logo)</strong>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Visión Artificial para auditoría de fotos
+              </li>
+</ul>
+</div>
+<a class="mt-space-xl inline-flex items-center justify-center w-full py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-primary-container text-on-primary hover:bg-primary transition-colors shadow-md" href="/#">
+            Comenzar Prueba Gratuita
+          </a>
+</div>
+<!-- Plan 3: Enterprise / Red Inmobiliaria -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Plan Red &amp; Franquicias</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para franquicias inmobiliarias y fondos de inversión.</p>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-numeric-data-lg text-[32px] text-primary font-bold">A Medida</span>
+</div>
+<ul class="flex flex-col gap-space-sm text-on-surface font-body-sm text-body-sm pt-space-xs">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Cobertura nacional completa (España)
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Acceso directo vía API REST &amp; Webhooks
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Módulos multi-sucursal y permisos por rol
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> Consultor analítico dedicado y onboarding
+              </li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span> SLA garantizado por contrato del 99.9%
+              </li>
+</ul>
+</div>
+<a class="mt-space-xl inline-flex items-center justify-center w-full py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-surface-container text-primary hover:bg-surface-container-high transition-colors" href="/#">
+            Solicitar Propuesta Personalizada
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CALL TO ACTION BANNER -->
+<section class="w-full bg-primary text-on-primary py-space-3xl relative overflow-hidden">
+<!-- Abstract ambient glow -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop relative z-10">
+<div class="bg-surface-container-low/10 backdrop-blur-md p-space-2xl md:p-space-3xl rounded-xl flex flex-col lg:flex-row items-center justify-between gap-space-2xl">
+<div class="flex flex-col gap-space-md max-w-2xl text-center lg:text-left">
+<div class="inline-flex items-center self-center lg:self-start gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase">
+            Garantía de Satisfacción 14 Días
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-bold">
+            Empieza hoy a liderar el mercado inmobiliario de tu comarca
+          </h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest leading-relaxed">
+            Sin tarjeta de crédito requerida para la prueba. Configura tu comarca en menos de 2 minutos y recibe las primeras alertas de particulares antes del final del día.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-space-2xl py-space-md rounded-lg font-label-lg text-label-lg font-bold bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim transition-all shadow-lg text-center" href="/#precios">
+            Activar Prueba Gratuita Ahora
+          </a>
+<button class="w-full sm:w-auto inline-flex items-center justify-center px-space-xl py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-surface-container-lowest/10 text-on-primary hover:bg-surface-container-lowest/20 transition-all text-center" onclick="document.getElementById('demo-modal').classList.toggle('hidden')">
+            Hablar con un Asesor
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE MODAL (DEMO PREVIEW) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" id="demo-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-xl shadow-2xl flex flex-col gap-space-md relative">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('demo-modal').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-secondary">videocam</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">Solicitar Demo Guiada de Propy</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Un especialista en datos inmobiliarios te mostrará en directo la cantidad de chalets y pisos de particulares activos en tu zona exacta.
+      </p>
+<form class="flex flex-col gap-space-sm pt-space-xs" onsubmit="event.preventDefault(); alert('¡Gracias! Un consultor inmobiliario de Propy se pondrá en contacto contigo en breve.'); document.getElementById('demo-modal').classList.add('hidden');">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Nombre Completo</label>
+<input class="w-full px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" placeholder="Ej. Carlos Martínez" required="" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Teléfono Móvil (WhatsApp)</label>
+<input class="w-full px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" placeholder="+34 600 000 000" required="" type="tel">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Zona Inmobiliaria Principal</label>
+<input class="w-full px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-secondary" placeholder="Ej. Camp de Túria, Valencia Capital, Pozuelo..." required="" type="text">
+</div>
+<button class="mt-space-sm w-full py-space-md rounded-lg font-label-lg text-label-lg font-bold bg-primary text-on-primary hover:bg-primary-container transition-colors" type="submit">
+          Agendar Demostración de 15 Minutos
+        </button>
+</form>
+</div>
+</div>
+<!-- Client-side Interactive Billing Switcher -->
+<script>
+    function setBilling(mode) {
+      const btnMensual = document.getElementById('btn-mensual');
+      const btnAnual = document.getElementById('btn-anual');
+      const pricePro = document.getElementById('price-pro');
+      const priceElite = document.getElementById('price-elite');
+
+      if (mode === 'anual') {
+        btnAnual.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all flex items-center gap-1';
+        btnMensual.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all';
+        pricePro.innerText = '65 €';
+        priceElite.innerText = '155 €';
+      } else {
+        btnMensual.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-primary shadow-xs transition-all';
+        btnAnual.className = 'px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1';
+        pricePro.innerText = '79 €';
+        priceElite.innerText = '189 €';
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-2xl pb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-0 lg:pr-space-2xl"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">Propy</span><span class="px-space-xs py-space-2xs rounded-lg bg-surface-container-high text-on-surface font-numeric-data-sm text-numeric-data-sm">v2.8 ES</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-md">Plataforma institucional de inteligencia analítica y valoración de activos inmobiliarios en España. Sincronización continua de Catastro, Registro de la Propiedad y algoritmos predictivos AVM.</p><div class="flex flex-wrap items-center gap-space-md pt-space-xs"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest"><span class="material-symbols-outlined text-secondary text-sm">verified</span><span class="font-label-sm text-label-sm text-on-surface-variant">Certificación Catastro DGC</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-lowest"><span class="material-symbols-outlined text-secondary text-sm">lock</span><span class="font-label-sm text-label-sm text-on-surface-variant">ISO 27001 &amp; RGPD</span></div></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Soluciones IA</span><div class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors" data-path="captacion-particulares" href="/#">Captación Particulares (FSBO)</a><a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors" data-path="explorador-ia" href="/#">Explorador Catastral &amp; GIS</a><a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors" data-path="negociacion-valoracion" href="/#">Motor AVM &amp; Negociación</a><a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors" data-path="caracteristicas" href="/#">Auditoría Registral Directa</a><a class="font-body-md text-body-md text-on-surface hover:text-secondary transition-colors" data-path="precios" href="/#">API para Fondos e Inversión</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Mercados &amp; Cobertura</span><div class="flex flex-col gap-space-xs"><span class="font-body-md text-body-md text-on-surface">Madrid (Distritos &amp; M-30)</span><span class="font-body-md text-body-md text-on-surface">Barcelona &amp; Àrea Metropolitana</span><span class="font-body-md text-body-md text-on-surface">Valencia &amp; L'Horta</span><span class="font-body-md text-body-md text-on-surface">Málaga &amp; Costa del Sol</span><span class="font-body-md text-body-md text-on-surface">Sevilla, Zaragoza &amp; Bilbao</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Sedes &amp; Contacto</span><div class="flex flex-col gap-space-md text-on-surface-variant font-body-sm text-body-sm"><div class="flex flex-col gap-space-2xs"><span class="font-label-sm text-label-sm font-semibold text-on-surface">Sede Madrid</span><span>Paseo de la Castellana 95, Planta 18</span><span>28046 Madrid</span></div><div class="flex flex-col gap-space-2xs"><span class="font-label-sm text-label-sm font-semibold text-on-surface">Hub Tecnológico Valencia</span><span>Carrer de les Barques 2, Planta 4</span><span>46002 València</span></div><div class="flex items-center gap-space-xs pt-space-xs"><span class="material-symbols-outlined text-sm text-secondary">mail</span><span>desk@propy.es</span></div></div></div></div><div class="pt-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 Propy Technologies Ibérica S.L. Todos los derechos reservados.</p><a class="hover:text-on-surface transition-colors" href="/#">Aviso Legal</a><a class="hover:text-on-surface transition-colors" href="/#">Política de Privacidad</a><a class="hover:text-on-surface transition-colors" href="/#">Seguridad de Datos</a><a class="hover:text-on-surface transition-colors" href="/#">Condiciones del Servicio</a></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant">SLA 99.98% Operativo</span><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span></div></div></div></footer></body></html>
