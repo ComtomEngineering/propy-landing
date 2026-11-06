@@ -7,9 +7,7 @@
 <!-- Subtle architectural isometric grid layer -->
 <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#003820 1px, transparent 1px); background-size: 24px 24px;"></div>
 <div class="w-full max-w-[1536px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-2xl md:py-space-3xl relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
-<!-- Left: Value Narrative & Conversion Hooks -->
-<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col items-center gap-space-lg">
 <!-- Institutional pill badge -->
 <div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-container/30 w-fit">
 <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
@@ -18,15 +16,15 @@
             </span>
 </div>
 <!-- Main Impact Title -->
-<h1 class="font-headline-xl text-headline-xl lg:text-[44px] lg:leading-[52px] text-primary tracking-tight font-bold">
+<h1 class="font-headline-xl text-headline-xl lg:text-[44px] lg:leading-[52px] text-primary tracking-tight font-bold text-center max-w-5xl">
             Multiplica tus Captaciones y Cierra Operaciones al Mejor Precio con <span class="text-secondary underline decoration-secondary-fixed decoration-4 underline-offset-4">Inteligencia Artificial</span>
 </h1>
 <!-- Body copy -->
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl text-center leading-relaxed">
             La solución definitiva para agencias y agentes inmobiliarios en España: detecta particulares vendiendo sin comisión, localiza oportunidades con descuento real antes que nadie y asesora con datos catastrales y de mercado en tiempo real.
           </p>
 <!-- Dual CTAs -->
-<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md pt-space-xs">
 <a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-lg font-label-lg text-label-lg font-semibold bg-primary-container text-on-primary hover:bg-primary transition-all shadow-md group" href="/#precios">
 <span>Empezar Prueba Gratuita de 14 Días</span>
 <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -37,7 +35,7 @@
 </button>
 </div>
 <!-- Trust & Social Proof Metrics -->
-<div class="pt-space-md flex flex-wrap items-center gap-space-xl text-on-surface-variant">
+<div class="pt-space-md flex flex-wrap items-center justify-center gap-space-xl text-on-surface-variant">
 <div class="flex items-center gap-space-sm">
 <div class="flex -space-x-2">
 <div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-numeric-data-sm text-numeric-data-sm shadow-sm">MA</div>
@@ -69,21 +67,16 @@
 </div>
 </div>
 </div>
-<!-- Right: Modern Glassmorphic Dashboard Showcase with Provided Creative -->
-<div class="lg:col-span-5 relative">
+<!-- Platform Screenshot: centered below copy, bottom fades out to save vertical space -->
+<div class="relative w-full max-w-5xl mx-auto mt-space-lg md:mt-space-xl">
 <!-- Ambient decorative halo -->
-<div class="absolute -top-12 -right-12 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
-<div class="relative bg-surface-container-low rounded-xl shadow-xl overflow-hidden p-space-xs transition-transform duration-500 hover:scale-[1.01]">
-<img alt="Propy Platform Screenshot" class="w-full h-auto object-cover rounded-lg shadow-sm" src="/assets/images/platform-screenshot.png" loading="lazy" decoding="async">
-<!-- Live Data Floating Chips -->
-<div class="absolute top-4 left-4 bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-md flex items-center gap-space-xs">
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 w-[min(90%,720px)] h-64 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative h-[clamp(340px,52vh,620px)] overflow-hidden rounded-t-2xl" style="-webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 97%); mask-image: linear-gradient(to bottom, black 70%, transparent 97%);">
+<img alt="Explorador de Oportunidades Inmobiliarias de Propy" class="w-full h-full object-cover object-top" src="/assets/images/screen.webp" fetchpriority="high" decoding="async">
+<!-- Live Data Floating Chip -->
+<div class="absolute top-4 left-4 hidden md:flex bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-md items-center gap-space-xs">
 <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
 <span class="font-label-sm text-label-sm font-semibold text-primary">Sincronización en Directo: Valencia &amp; Madrid</span>
-</div>
-<div class="absolute bottom-4 right-4 bg-primary px-space-md py-space-xs rounded-lg shadow-lg flex items-center gap-space-xs text-on-primary">
-<span class="material-symbols-outlined text-secondary-fixed text-sm">trending_down</span>
-<span class="font-numeric-data-sm text-numeric-data-sm font-bold">Oportunidad -40.000 € (-10.4%)</span>
-</div>
 </div>
 </div>
 </div>
